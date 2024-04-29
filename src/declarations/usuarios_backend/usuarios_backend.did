@@ -1,0 +1,7 @@
+service: () -> {
+    createBook: (text, text, text) -> (record {id:principal; title:text; author:text; genre:text});
+    deleteBook: (text) -> (variant {Ok:record {id:principal; title:text; author:text; genre:text}; Err:variant {BookDoesNotExist:text}});
+    readBookById: (text) -> (opt record {id:principal; title:text; author:text; genre:text}) query;
+    readBooks: () -> (vec record {id:principal; title:text; author:text; genre:text}) query;
+    updateBook: (text, text, text, text) -> (variant {Ok:record {id:principal; title:text; author:text; genre:text}; Err:variant {BookDoesNotExist:text}});
+}
